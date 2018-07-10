@@ -1,0 +1,25 @@
+{
+  "name": "week-2-g-force-project",
+  "version": "1.0.0",
+  "description": "Build a to-do app",
+  "main": "dom.js",
+  "dependencies": {
+    "istanbul": "^0.4.5",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN4/Week-2-G-force-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN4/Week-2-G-force-project/issues"
+  },
+  "homepage": "https://github.com/FACN4/Week-2-G-force-project#readme"
+}
