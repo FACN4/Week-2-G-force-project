@@ -36,12 +36,12 @@
 
     // add markTodo button
     var markToDoButtonNode = document.createElement('button');
-
+    markToDoButtonNode.textContent = 'undone';
     markToDoButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
+      markToDoButtonNode.textContent = "✓ test"
       update(newState);
     });
-
     markToDoButtonNode.className += ' btn btn-markTodo'
     todoNode.appendChild(markToDoButtonNode);
     // add classes for css
@@ -51,21 +51,23 @@
 
 
   // bind create todo form
-  var addTodoForm = document.getElementById('add-todo').childNodes[1];
+  var addTodoForm = document.getElementById('add-todo');
 
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      var description = {};
+      description.description = document.getElementById('add-todo').firstElementChild.value; // event.target ....
+      console.log(description.description);
+
+      var newState = todoFunctions.addTodo(state, description);
+
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what does event.preventDefault do?
       // what is inside event.target?
-      event.preventDefault();
-      var description = {}
-      description.description = document.getElementById('add-todo').childNodes[0].value; // event.target ....
-      console.log(description);
-      var newState = todoFunctions.addTodo(state, description);
       // hint: todoFunctions.addTodo
       // ?? change this!
-
+      document.getElementById('add-todo').firstElementChild.value = ''
       update(newState);
     });
   }
