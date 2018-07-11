@@ -23,13 +23,13 @@
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
-
+    deleteButtonNode.className += ' btn btn-delete'
+    deleteButtonNode.textContent = 'X';
     deleteButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
 
-    deleteButtonNode.className += ' btn btn-delete'
 
     todoNode.appendChild(deleteButtonNode);
 
