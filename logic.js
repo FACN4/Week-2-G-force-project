@@ -24,10 +24,10 @@ var todoFunctions = {
   },
 
   addTodo: function(todos, newTodo) {
+    var todosCopy = todoFunctions.cloneArrayOfObjects(todos);
     var newTodoId = todoFunctions.generateId();
     var newTodoDescription = newTodo.description;
     var newTodoDone = false;
-    var todosCopy = todoFunctions.cloneArrayOfObjects(todos);
 
     var newTodoArray = [{id: newTodoId, description: newTodoDescription, done:newTodoDone}]
 
@@ -40,14 +40,14 @@ var todoFunctions = {
     // hint: array.concat
   },
   deleteTodo: function(todos, idToDelete) {
-    var todosCopy = JSON.parse(JSON.stringify(todos));
+    var todosCopy = todoFunctions.cloneArrayOfObjects(todos);
     return todosCopy.filter(obj => obj.id !== idToDelete);
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
   },
   markTodo: function(todos, idToMark) {
-    var todosCopy = JSON.parse(JSON.stringify(todos));
+    var todosCopy = todoFunctions.cloneArrayOfObjects(todos);
     todosCopy.map(function(obj){
       if (obj.done ===true && obj.id === idToMark) {
         obj.done = false

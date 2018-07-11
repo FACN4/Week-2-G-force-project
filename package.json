@@ -4,11 +4,12 @@
   "description": "Build a to-do app",
   "main": "dom.js",
   "dependencies": {
-    "istanbul": "^0.4.5",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "istanbul": "^0.4.5"
+  },
   "scripts": {
     "test": "node test.js | tap-spec"
   },
