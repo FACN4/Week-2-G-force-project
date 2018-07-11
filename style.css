@@ -5,36 +5,38 @@ body {
   }
   div{
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 ul{
   list-style :  none;
 }
 
 li{
-  font-size: 90px;
-  padding: 70px 0px 70px 0px;
+  display:grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  font-size: 35px;
+  padding: 10px 0px 10px 0px;
+  width:90%;
 
 
 }
 .btn {
   background-color: none;
   border: 2px solid square black;
-  border-radius: 20px 40px ;
+  border-radius: 6px 12px;
   text-color: white;
-  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: outline-block;
-  height: 130px;
-  width: 130px;
+  height: 40px;
+  width: 40px;
 
 
 }
 .btn-delete{
 background-color: #d8673e;
 float: left;
-font-size: 90px;
+font-size: 35px;
 }
 .btn-done{
 background-color : blue ;
@@ -48,12 +50,12 @@ form{
 }
 #add-todo input {
   position: fixed;
-  font-size: 90px;
+  font-size: 35px;
   border-radius: 0px;
   font-family: Indie Flower , sans;
   height:10%;
   bottom: 0px;
-  border: 10px;
+  border: 0px;
   border-color: black;
 }
 
