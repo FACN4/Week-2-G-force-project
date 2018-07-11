@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
-
 body {
   font-family: Indie Flower , sans;
   background-color : turquoise;
@@ -15,7 +14,6 @@ body {
 ul{
   list-style :  none;
 }
-
 
 li{
   font-size: 90px;
@@ -36,7 +34,6 @@ li{
   font-weight: bold;
   font-size: 20px;
 }
-
 .btn-delete{
 background-color: #000;
 border : inset red;
@@ -65,12 +62,10 @@ form{
   border: 10px;
 }
 
-
 #add-todo input[type = text]{
   right: 0px;
   width:75%;
 }
-
 
 #add-todo input[type = submit]{
   left: 0px;
