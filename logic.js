@@ -48,8 +48,10 @@ var todoFunctions = {
   },
   markTodo: function(todos, idToMark) {
     var todosCopy = JSON.parse(JSON.stringify(todos));
-    todosCopy = todosCopy.map(function(obj){
-      if (obj.id === idToMark){
+    todosCopy.map(function(obj){
+      if (obj.done ===true && obj.id === idToMark) {
+        obj.done = false
+      } else if (obj.done === false && obj.id === idToMark){
         obj.done = true;
       };
     });
