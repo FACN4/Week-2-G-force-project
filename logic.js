@@ -24,18 +24,36 @@ var todoFunctions = {
   },
 
   addTodo: function(todos, newTodo) {
-    return todos.concat(newTodo);
+    var newTodoId = todoFunctions.generateId();
+    var newTodoDescription = newTodo.description;
+    var newTodoDone = false;
+    var todosCopy = todoFunctions.cloneArrayOfObjects(todos);
+
+    var newTodoArray = [{id: newTodoId, description: newTodoDescription, done:newTodoDone}]
+
+    var updatedTodos = todosCopy.concat(newTodoArray);
+    return updatedTodos;
+
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
   },
   deleteTodo: function(todos, idToDelete) {
+    var todosCopy = JSON.parse(JSON.stringify(todos));
+    return todosCopy.filter(obj => obj.id !== idToDelete);
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
   },
   markTodo: function(todos, idToMark) {
+    var todosCopy = JSON.parse(JSON.stringify(todos));
+    todosCopy = todosCopy.map(function(obj){
+      if (obj.id === idToMark){
+        obj.done = true;
+      };
+    });
+    return todosCopy
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
