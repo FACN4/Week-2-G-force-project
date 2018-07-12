@@ -8,9 +8,7 @@ test("addToDo", function(t) {
     "should return an array"
   );
   var actual = logic.addTodo(
-    [{ id: 1, description: "grow a tree", done: false }],
-    { description: "eat an apple" }
-  );
+    [{ id: 1, description: "grow a tree", done: false }], "eat an apple" );
   var expected = [
     { id: 1, description: "grow a tree", done: false },
     { id: 2, description: "eat an apple", done: false }
@@ -34,29 +32,16 @@ test("deleteTodo", function(t) {
 });
 
 test("markTodo", function(t) {
-  var actual = logic.markTodo(
-    [{ id: 1, description: "grow a tree", done: false }],
-    1
-  );
+  var actual = logic.markTodo([{ id: 1, description: "grow a tree", done: false }], 1);
   var expected = [{ id: 1, description: "grow a tree", done: true }];
   t.same(actual, expected, "should be marked as done");
 
-  var actual = logic.markTodo(
-    [{ id: 1, description: "grow a tree", done: true }],
-    1
-  );
+  var actual = logic.markTodo([{ id: 1, description: "grow a tree", done: true }], 1);
   var expected = [{ id: 1, description: "grow a tree", done: false }];
   t.same(actual, expected, "should toggle doen status");
 
-  var actual = logic.markTodo(
-    [{ id: 100, description: "grow a tree", done: true }],
-    1
-  );
+  var actual = logic.markTodo([{ id: 100, description: "grow a tree", done: true }],1);
   var expected = [{ id: 100, description: "grow a tree", done: true }];
-  t.same(
-    actual,
-    expected,
-    "mark to-do should not change when ID number don't match"
-  );
+  t.same(actual, expected, "mark to-do should not change when ID number don't match");
   t.end();
 });

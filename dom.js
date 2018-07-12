@@ -39,13 +39,15 @@
 
     // add markTodo button
     var markToDoButtonNode = document.createElement('button');
-    markToDoButtonNode.textContent = '';
+
+
+    markToDoButtonNode.className += ' btn btn-markTodo';
     markToDoButtonNode.addEventListener('click', function(event) {
+      markToDoButtonNode.textContent = "✓ test";
       var newState = todoFunctions.markTodo(state, todo.id);
-      markToDoButtonNode.textContent = "✓ test"
+      console.log('hi');
       update(newState);
     });
-    markToDoButtonNode.className += ' btn btn-markTodo'
     todoNode.appendChild(markToDoButtonNode);
     // add classes for css
 
@@ -54,14 +56,11 @@
 
 
   // bind create todo form
-  var addTodoForm = document.getElementById('add-todo');
 
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
       event.preventDefault();
-      var description = {};
-      description.description = document.getElementById('add-todo').firstElementChild.value; // event.target ....
-      console.log(description.description);
+      var description = addTodoForm.firstElementChild.value; // event.target ....
 
       var newState = todoFunctions.addTodo(state, description);
 
@@ -70,7 +69,7 @@
       // what is inside event.target?
       // hint: todoFunctions.addTodo
       // ?? change this!
-      document.getElementById('add-todo').firstElementChild.value = ''
+      addTodoForm.firstElementChild.value = ''
       update(newState);
     });
   }

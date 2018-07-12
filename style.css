@@ -37,10 +37,17 @@ li{
 }
 
 .btn-delete{
-background-color: #000;
 border : inset red;
 float : left;
 font-size: 29px;
+}
+.btn-delete:hover{
+background-color: #ffe6e6;
+}
+.btn-markTodo{
+float : right;
+background-color: green;
+content: 'Hello World';
 }
 .btn-done{
 float : right;
