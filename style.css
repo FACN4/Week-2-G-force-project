@@ -21,6 +21,7 @@ li{
   font-weight: bold;
 }
 
+
 .btn {
   background-color: black;
   border : inset red;
@@ -34,12 +35,14 @@ li{
   font-weight: bold;
   font-size: 5px;
 }
+
 .btn-delete{
 background-color: #000;
 border : inset red;
 float : left;
 font-size: 29px;
 }
+
 
 .btn-done{
 float : right;
