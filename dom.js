@@ -39,7 +39,7 @@
 
     // add markTodo button
     var markToDoButtonNode = document.createElement('button');
-    markToDoButtonNode.textContent = 'undone';
+    markToDoButtonNode.textContent = '';
     markToDoButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
       markToDoButtonNode.textContent = "✓ test"
