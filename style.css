@@ -17,7 +17,7 @@ ul{
 }
 
 li{
-  font-size: 30px;
+  font-size: 26px;
   padding: 10px 0px 30px 0px;
   font-weight: bold;
 }
@@ -29,18 +29,18 @@ li{
   color: white;
   text-align: center;
   position: relative;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   float:right;
   font-weight: bold;
-  font-size: 5px;
 }
 
 .btn-delete{
 border : inset red;
 float : left;
-font-size: 29px;
+font-size: 37px;
 }
+
 .btn-delete:hover{
 background-color: #ffe6e6;
 }
@@ -61,7 +61,6 @@ form{
 }
 #add-todo input {
   position: fixed;
-
   font-size: 35px;
   display: flex;
   border-radius: 0px;
@@ -70,7 +69,7 @@ form{
   bottom: 0px;
   border: 3.5px;
 }
-
+@media only screen and (max-device-width : 600px){
 #add-todo input[type = text]{
   right: 0px;
   width:75%;
@@ -81,4 +80,35 @@ form{
   width:25%;
   background-color: orangered ;
   font-weight: bold;
+}
+}
+@media only screen and (min-device-width : 600px){
+  #add-todo input[type = text]{
+    right: 0px;
+    width:75%;
+
+
+  }
+  #add-todo input[type = submit]{
+    left: 0px;
+    width:25%;
+    background-color: orangered ;
+    font-weight: bold;
+  }
+  li{
+    font-size: 40px;
+  }
+
+  .btn {
+    height: 70px;
+    width: 70px;
+    font-size: 17px;
+  }
+  .btn-delete{
+  font-size: 71px;
+}
+  #add-todo input {
+    font-size: 60px;
+    border: 10px;
+  }
 }

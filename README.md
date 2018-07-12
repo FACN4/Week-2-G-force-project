@@ -2,6 +2,8 @@
 
 Build a to-do app:
 
+https://facn4.github.io/Week-2-G-force-project/
+
 # what:
 
 Build a to-do-list app. user stories as followed:
@@ -21,3 +23,12 @@ Build a to-do-list app. user stories as followed:
 - to help plan any user on a day-to-day baises.
 
 # how:
+
+at first we worked together to understand the dom and what was happening in the code. then we split the tasks :
+
+- css :- ben and sol.
+- coverage testing :- noor aka Mr.Bubbles.
+
+git flow: efficient but not frequent.
+
+![bubbles](https://media.giphy.com/media/10S42gVFmZJ4eA/giphy.gif)
