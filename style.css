@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
-
 body {
   font-family: Indie Flower , sans;
   background-color : turquoise;
-  padding-top : 300px;
-  border-top: double 12em orangered ;
+  padding-top : 100px;
+  border-top: double 4em orangered ;
   }
 
   div{
@@ -16,10 +15,9 @@ ul{
   list-style :  none;
 }
 
-
 li{
-  font-size: 90px;
-  padding: 30px 0px 90px 0px;
+  font-size: 30px;
+  padding: 10px 0px 30px 0px;
   font-weight: bold;
 }
 
@@ -30,18 +28,17 @@ li{
   color: white;
   text-align: center;
   position: relative;
-  height: 90px;
-  width: 90px;
+  height: 30px;
+  width: 30px;
   float:right;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 5px;
 }
-
 .btn-delete{
 background-color: #000;
 border : inset red;
 float : left;
-font-size: 101px;
+font-size: 29px;
 }
 
 .btn-done{
@@ -56,21 +53,19 @@ form{
 }
 #add-todo input {
   position: fixed;
-  font-size: 90px;
+  font-size: 35px;
   display: flex;
   border-radius: 0px;
   font-family: Indie Flower , sans;
   height:10%;
   bottom: 0px;
-  border: 10px;
+  border: 3.5px;
 }
-
 
 #add-todo input[type = text]{
   right: 0px;
   width:75%;
 }
-
 
 #add-todo input[type = submit]{
   left: 0px;
