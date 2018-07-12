@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "nyc tape test.js",
+    "test": "nyc tape test.js | tap-spec",
     "coverage": "nyc --reporter=lcov npm run test"
   },
   "repository": {

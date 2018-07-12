@@ -29,7 +29,9 @@ var todoFunctions = {
     var newTodoDescription = newTodo.description;
     var newTodoDone = false;
 
-    var newTodoArray = [{id: newTodoId, description: newTodoDescription, done:newTodoDone}]
+    var newTodoArray = [
+      { id: newTodoId, description: newTodoDescription, done: newTodoDone }
+    ];
 
     var updatedTodos = todosCopy.concat(newTodoArray);
     return updatedTodos;
@@ -48,14 +50,14 @@ var todoFunctions = {
   },
   markTodo: function(todos, idToMark) {
     var todosCopy = todoFunctions.cloneArrayOfObjects(todos);
-    todosCopy.map(function(obj){
-      if (obj.done ===true && obj.id === idToMark) {
-        obj.done = false
-      } else if (obj.done === false && obj.id === idToMark){
+    todosCopy.map(function(obj) {
+      if (obj.done === true && obj.id === idToMark) {
+        obj.done = false;
+      } else if (obj.done === false && obj.id === idToMark) {
         obj.done = true;
-      };
+      }
     });
-    return todosCopy
+    return todosCopy;
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled

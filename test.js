@@ -46,13 +46,17 @@ test("markTodo", function(t) {
     1
   );
   var expected = [{ id: 1, description: "grow a tree", done: false }];
-  t.same(actual, expected, "should be marked as done");
+  t.same(actual, expected, "should toggle doen status");
 
   var actual = logic.markTodo(
     [{ id: 100, description: "grow a tree", done: true }],
     1
   );
-  var expected = [{ id: 98, description: "grow a tree", done: true }];
-  t.same(actual, expected, "should be marked as done");
+  var expected = [{ id: 100, description: "grow a tree", done: true }];
+  t.same(
+    actual,
+    expected,
+    "mark to-do should not change when ID number don't match"
+  );
   t.end();
 });
