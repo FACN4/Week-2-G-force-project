@@ -2,69 +2,74 @@
 body {
   font-family: Indie Flower , sans;
   background-color : turquoise;
+  padding-top : 300px;
+  border-top: double 12em orangered ;
   }
+
   div{
     display: flex;
-    justify-content: right;
+    justify-content: center;
+
 }
 ul{
   list-style :  none;
 }
 
 li{
-  display:grid;
-  grid-template-columns: 1fr 10fr 1fr;
-  font-size: 35px;
-  padding: 10px 0px 10px 0px;
-  width:90%;
-
-
+  font-size: 90px;
+  padding: 30px 0px 90px 0px;
+  font-weight: bold;
 }
+
 .btn {
-  background-color: none;
-  border: 2px solid square black;
-  border-radius: 6px 12px;
-  text-color: white;
+  background-color: black;
+  border : inset red;
+  border-radius: -10px 10px ;
+  color: white;
   text-align: center;
-  text-decoration: none;
-  display: outline-block;
-  height: 40px;
-  width: 40px;
-
-
+  position: relative;
+  height: 90px;
+  width: 90px;
+  float:right;
+  font-weight: bold;
+  font-size: 20px;
 }
 .btn-delete{
-background-color: #d8673e;
-float: left;
-font-size: 35px;
+background-color: #000;
+border : inset red;
+float : left;
+font-size: 101px;
 }
-.btn-done{
-background-color : blue ;
 
+.btn-done{
+float : right;
 }
+
 form{
   display: flex;
-  justify-content: center;
+  justify-content: center
   background-color : white;
 
 }
 #add-todo input {
   position: fixed;
-  font-size: 35px;
+  font-size: 90px;
+  display: flex;
   border-radius: 0px;
   font-family: Indie Flower , sans;
   height:10%;
   bottom: 0px;
-  border: 0px;
-  border-color: black;
+  border: 10px;
 }
 
 #add-todo input[type = text]{
   right: 0px;
   width:75%;
 }
+
 #add-todo input[type = submit]{
   left: 0px;
   width:25%;
-  background-color: #e878e2;
+  background-color: orangered ;
+  font-weight: bold;
 }
