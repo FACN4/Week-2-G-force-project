@@ -31,4 +31,4 @@ at first we worked together to understand the dom and what was happening in the 
 
 git flow: efficient but not frequent.
 
-\*[](https://media.giphy.com/media/10S42gVFmZJ4eA/giphy.gif)
+![bubbles](https://media.giphy.com/media/10S42gVFmZJ4eA/giphy.gif)
