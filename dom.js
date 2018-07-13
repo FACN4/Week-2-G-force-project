@@ -7,9 +7,9 @@
   var addTodoForm = document.getElementById('add-todo');
 
   var state = [
-    { id: -3, description: 'first todo' },
-    { id: -2, description: 'second todo' },
-    { id: -1, description: 'third todo' },
+    { id: -3, description: 'first todo' ,done: false},
+    { id: -2, description: 'second todo',done: false },
+    { id: -1, description: 'third todo' , done: false },
 
   ]; // this is our initial todoList
 
@@ -39,13 +39,15 @@
 
     // add markTodo button
     var markToDoButtonNode = document.createElement('button');
-
-
+    
+    if(todo.done){
+markToDoButtonNode.textContent = "yes";
+}else {markToDoButtonNode.textContent = "no";}
     markToDoButtonNode.className += ' btn btn-markTodo';
     markToDoButtonNode.addEventListener('click', function(event) {
-      markToDoButtonNode.textContent = "✓ test";
+    //  markToDoButtonNode.textContent = "✓ test";
       var newState = todoFunctions.markTodo(state, todo.id);
-      console.log('hi');
+
       update(newState);
     });
     todoNode.appendChild(markToDoButtonNode);
